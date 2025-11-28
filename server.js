@@ -7,7 +7,7 @@ var express = require('express'),
     passport = require('passport'),
     crypto = require('crypto'),
     flash = require('connect-flash'),
-    mongoose = require('mongoose'),
+    // mongoose = require('mongoose'),   //
     morgan       = require('morgan');
 
 var handlebars = require('express-handlebars').create({
@@ -20,7 +20,7 @@ var handlebars = require('express-handlebars').create({
 var app = express();
 
 app.use(morgan('dev')); // log every request to the console
-mongoose.connect('mongodb://127.0.0.1:27017/samplenodejsapp')
+// mongoose.connect('mongodb://127.0.0.1:27017/samplenodejsapp')
 
 require('./src/middleware/passport')(passport);
 
